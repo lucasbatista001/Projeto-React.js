@@ -1,0 +1,45 @@
+
+/*Div para ocutar a tabela*/
+form{
+    position: relative;
+    width: 500px;
+    margin: 30px auto;
+    text-align: center;
+  }
+  
+  form input{
+    margin-bottom: 5px;
+  }
+  
+  form input[type='button']{
+    margin-right: 10px;
+  }
+  
+  
+  .contirner-form{
+    position: relative;
+    background: #9edfd3;
+    height: 500px;
+    width: 600px;
+    border-radius: 8px;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px 2px 7px rgba(0,0,0,0.4);
+  
+  }
+  
+  #btnlista {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
