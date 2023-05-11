@@ -4,15 +4,23 @@ import './indexbtn.css';
 import Formulario from './Formulario';
 import Tabela from './Tabela';
 
+
 function App() {
 
   // Objeto produto
   const produto = {
-    codigo : 0,
-    nome : '',
-    marca : '',
-    nomedopais: ''
-  }
+    codigo: 0,
+    nome: '',
+    nomedopais: '',
+    endereco: '',
+    cpf: '',
+    sexo: '',
+    telefone: '',
+    altura: 0,
+    peso: 0,
+    dataNascimento: '',
+  };
+  
 
   // UseState
   const [btnCadastrar, setBtnCadastrar] = useState(true);
@@ -33,7 +41,8 @@ function App() {
 
   // Cadastrar produto
   const cadastrar = () => {
-    fetch('http://localhost:8080/cadrastrar',{
+    console.log(objProduto);
+    fetch('http://localhost:8080/cadastrar',{
       method:'post',
       body:JSON.stringify(objProduto),
       headers:{
@@ -143,10 +152,9 @@ function App() {
     setBtnCadastrar(false);
   }
 
+
   // Retorno
   return (
-
-    
     <div className=''>
       <div className='contirner-form'>
         <Formulario botao={btnCadastrar} eventoTeclado={aoDigitar} cadastrar={cadastrar} obj={objProduto} remover={remover} alterar={alterar} cancelar={limparFormulario} />
