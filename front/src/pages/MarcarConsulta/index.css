@@ -1,4 +1,3 @@
-/*tabela oculta*/
 
 *{
     box-sizing: border-box;
@@ -22,7 +21,7 @@ h2{
 
 table{
     border-radius: 5px;
-    font-size: 12px;
+    font-size: 20px;
     font-weight: normal;
     border: none;
     border-collapse: collapse;
@@ -30,23 +29,24 @@ table{
     max-width: 100%;
     white-space: nowrap;
     background-color: white;
-    border: 1px solid #1a2929;
+    border: 2px solid #000000;
 }
 
 td, 
 th{
     text-align: center;
     padding: 8px;
-    border-right: 1px solid #1a2929;
+    border-right: 1px solid #000000;
 }
 
 td{
-    font-size: 12px;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 thead th{
     color: #ffffff;
-    background: #1a2929;
+    background: #0C4040;;
 }
 
 tr:nth-child(even){
@@ -91,7 +91,7 @@ th{
 
 thead th{
     text-align: left;
-    border-bottom: solid #f7f7f9;
+    border-bottom: solid #000000;
 }
 tbody tr{
     display: table-cell;
@@ -104,11 +104,11 @@ tr:nth-child(even){
 }
 tr td:nth-child(odd){
     background: #f8f8f8;
-    border-right: 1px solid #1a2929;
+    border-right: 1px solid #000000;
 }
 tr td:nth-child(even){
     background-color: #9edfd3;
-    border-right: 1px solid #1a2929;
+    border-right: 1px solid #000000;
 }
 tbody td {
     display: block;

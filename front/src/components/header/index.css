@@ -51,12 +51,12 @@ h1 h2 h3{
 }
 
 .textcard-h1{
-    font-size: 2vw;
+    font-size: 1vw;
     color: white;
     font-weight: bold;
     margin-top: 0;
     text-align: left;
-    font-size: xx-large;
+    font-size: x-large;
     
 }
 
@@ -64,7 +64,7 @@ h1 h2 h3{
     color: white;
     margin-top: 190px;
     font-weight: 8px;
-    font-size: 10px;
+    font-size: 8px;
     margin-bottom: 0;
 }
 
