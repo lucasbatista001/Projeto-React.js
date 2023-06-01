@@ -43,7 +43,7 @@ Git: Utilizamos o sistema de controle de versão Git para facilitar o trabalho c
 
 ![WhatsApp Image 2023-05-31 at 15 13 43](https://github.com/lucasbatista001/Projeto-React.js/assets/111438250/d175639a-0e07-43bc-a2f5-c3c1bb4713e7)
 
-
+![WhatsApp Image 2023-05-31 at 15 14 20](https://github.com/lucasbatista001/Projeto-React.js/assets/111438250/1cc687bc-9eea-448c-b1b5-ffb3074a487d)
 
 ###  front-end: Lucas Batista Galindo Santos
 
