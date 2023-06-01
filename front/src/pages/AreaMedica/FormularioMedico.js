@@ -51,18 +51,41 @@ function Formulario({ exibirbtn, eventoTeclado, cadastrar, obj, cancelar, remove
   <label htmlFor="cidade"><FontAwesomeIcon icon={['fas', 'map-marker']} /> Cidade</label>
   <input type="text" value={obj.cidade} onChange={eventoTeclado} name="cidade" id="cidade" placeholder="Cidade" className="form-control" />
 </div>
+
 <div>
-  <label htmlFor="texto" className='Diagnóstico'><FontAwesomeIcon icon={['fas', 'user']} /> Diagnóstico</label>
-  <input type="text" value={obj.texto} onChange={eventoTeclado} name="texto" id="texto" placeholder="Diagnóstico" className="form-control" />
+  <label htmlFor="diagnostico" className='Diagnóstico'><FontAwesomeIcon icon={['fas', 'user']} /> Diagnóstico</label>
+  <textarea
+    value={obj.diagnostico}
+    onChange={eventoTeclado}
+    name="diagnostico"
+    id="diagnostico"
+    placeholder="Diagnóstico"
+    className="form-control"
+  />
 </div>
 <div>
   <label htmlFor="receitas"><FontAwesomeIcon icon={['fas', 'user']} /> Receitas</label>
-  <input type="text" value={obj.receitas} onChange={eventoTeclado} name="receitas" id="receitas" placeholder="Receitas" className="form-control" />
+  <textarea
+    value={obj.receitas}
+    onChange={eventoTeclado}
+    name="receitas"
+    id="receitas"
+    placeholder="Receitas"
+    className="form-control"
+  />
 </div>
 <div>
   <label htmlFor="exames"><FontAwesomeIcon icon={['fas', 'user']} /> Exames</label>
-  <input type="text" value={obj.exames} onChange={eventoTeclado} name="exames" id="exames" placeholder="Exames" className="form-control" />
+  <textarea
+    value={obj.exames}
+    onChange={eventoTeclado}
+    name="exames"
+    id="exames"
+    placeholder="Exames"
+    className="form-control"
+  />
 </div>
+
 <div>
   <label htmlFor="data"><FontAwesomeIcon icon={['fas', 'calendar-alt']} /> Data</label>
   <input type="text" value={obj.data} onChange={eventoTeclado} name="data" id="data" placeholder="Data" className="form-control" />

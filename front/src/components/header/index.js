@@ -27,8 +27,6 @@ function Header() {
           window.history.replaceState(null, '', '/'); // Remove a página de login do histórico
         } else {
           alert('Senha incorreta');
-          console.log(chave);
-          console.log(data);
         }
       })
       .catch(error => {

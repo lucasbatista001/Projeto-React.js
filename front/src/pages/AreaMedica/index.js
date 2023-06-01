@@ -81,8 +81,12 @@ function App() {
       })
       .catch((error) => {
         console.error('Erro ao cadastrar cliente:', error);
+        
         setHasError(true);
         setHasSuccess(false);
+        setTimeout(() => {
+          setHasError(true);
+        }, 3000);
       });
   };
 
@@ -126,8 +130,12 @@ function App() {
       })
       .catch((error) => {
         console.error('Erro ao atualizar cliente:', error);
+        
         setHasError(true);
         setHasSuccess(false);
+        setTimeout(() => {
+          setHasError(false);
+        }, 3000);
       });
   };
 
@@ -157,8 +165,12 @@ function App() {
       })
       .catch((error) => {
         console.error('Erro ao remover cliente:', error);
+        
         setHasError(true);
         setHasSuccess(false);
+        setTimeout(() => {
+          setHasError(false);
+        }, 3000);
       });
   };
 
