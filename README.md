@@ -40,3 +40,9 @@ Bootstrap: Utilizamos o framework Bootstrap para agilizar o desenvolvimento e ga
 React Router Dom: para rotas.
 
 Git: Utilizamos o sistema de controle de versão Git para facilitar o trabalho colaborativo e o gerenciamento do código-fonte.
+
+front-end: Lucas Batista Galindo Santos
+
+Back-end:Eduardo Kevin
+https://github.com/Trawfal/ClinicaVirtu/tree/master
+
