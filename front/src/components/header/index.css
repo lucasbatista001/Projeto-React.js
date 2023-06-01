@@ -70,8 +70,25 @@ h1 h2 h3{
 
 .textcard-h3{
     color: white;
-    margin: -55px;
+    margin: -50px;
     text-align: left;
+}
+
+.input-chave > label{
+    margin-bottom: 15px;
+    display: flex;
+    position: relative;
+    color: white;
+    font-size: 15px;
+}
+
+.input-chave{
+    position: relative;
+}
+
+.input-chave > input{
+    margin-top: -15px;
+    margin-bottom: 15px;
 }
 
 .btn01 > a {

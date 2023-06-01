@@ -12,9 +12,9 @@
   }
   
   nav {
-    background-color: #0C4040;
+    background-color: #73CCDA;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     gap: 50px;
     padding: 15px 50px;

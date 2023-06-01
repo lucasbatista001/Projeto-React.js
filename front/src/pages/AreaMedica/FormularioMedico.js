@@ -9,35 +9,68 @@ function Formulario({ exibirbtn, eventoTeclado, cadastrar, obj, cancelar, remove
 
   return (
     <form>
-      <div>
-        <label htmlFor="nome"><FontAwesomeIcon icon={['fas', 'user']} /> Nome</label>
-        <input type="text" value={obj.nome} onChange={eventoTeclado} name="nome" id="nome" placeholder="Nome" className="form-control" />
-      </div>
-
-      <div>
-        <label htmlFor="cpf"><FontAwesomeIcon icon={['fas', 'id-card']} /> CPF</label>
-        <input type="text" value={obj.cpf} onChange={eventoTeclado} name="cpf" id="cpf" placeholder="CPF" className="form-control" />
-      </div>
-
-      <div>
-        <label htmlFor="email"><FontAwesomeIcon icon={['fas', 'envelope']} /> Email</label>
-        <input type="email" value={obj.email} onChange={eventoTeclado} name="email" id="email" placeholder="Email" className="form-control" />
-      </div>
-
-      <div>
-        <label htmlFor="telefone"><FontAwesomeIcon icon={['fas', 'phone']} /> Telefone</label>
-        <input type="text" value={obj.telefone} onChange={eventoTeclado} name="telefone" id="telefone" placeholder="Telefone" className="form-control" />
-      </div>
-
-      <div>
-        <label htmlFor="cidade"><FontAwesomeIcon icon={['fas', 'map-marker']} /> Cidade</label>
-        <input type="text" value={obj.cidade} onChange={eventoTeclado} name="cidade" id="cidade" placeholder="Cidade" className="form-control" />
-      </div>
-
-      <div>
-        <label htmlFor="texto"><FontAwesomeIcon icon={['fas', 'comment']} /> Texto</label>
-        <textarea value={obj.texto} onChange={eventoTeclado} name="texto" id="texto" placeholder="Texto" className="form-control" />
-      </div>
+<div>
+  <label htmlFor="nome"><FontAwesomeIcon icon={['fas', 'user']} /> Nome</label>
+  <input type="text" value={obj.nome} onChange={eventoTeclado} name="nome" id="nome" placeholder="Nome" className="form-control" />
+</div>
+<div>
+  <label htmlFor="nomeDosPais"><FontAwesomeIcon icon={['fas', 'users']} /> Nome dos Pais</label>
+  <input type="text" value={obj.nomeDosPais} onChange={eventoTeclado} name="nomeDosPais" id="nomeDosPais" placeholder="Nome dos Pais" className="form-control" />
+</div>
+<div>
+  <label htmlFor="cpf"><FontAwesomeIcon icon={['fas', 'user']} /> CPF</label>
+  <input type="text" value={obj.cpf} onChange={eventoTeclado} name="cpf" id="cpf" placeholder="CPF" className="form-control" />
+</div>
+<label htmlFor="sexo"><FontAwesomeIcon icon={['fas', 'venus-mars']} /> Sexo</label>
+          <select value={obj.sexo} onChange={eventoTeclado} name='sexo' id='sexo' className='form-control'>
+            <option value="">Selecione</option>
+            <option value="M">Masculino</option>
+            <option value="F">Feminino</option>
+          </select>
+<div>
+  <label htmlFor="email"><FontAwesomeIcon icon={['fas', 'user']} /> Email</label>
+  <input type="text" value={obj.email} onChange={eventoTeclado} name="email" id="email" placeholder="Email" className="form-control" />
+</div>
+<div>
+  <label htmlFor="altura"><FontAwesomeIcon icon={['fas', 'id-card']} /> Altura</label>
+  <input type="text" value={obj.altura} onChange={eventoTeclado} name="altura" id="altura" placeholder="Altura" className="form-control" />
+</div>
+<div>
+  <label htmlFor="peso"><FontAwesomeIcon icon={['fas', 'weight']} /> Peso</label>
+  <input type="text" value={obj.peso} onChange={eventoTeclado} name="peso" id="peso" placeholder="Peso" className="form-control" />
+</div>
+<div>
+  <label htmlFor="dataNascimento"><FontAwesomeIcon icon={['fas', 'calendar-alt']} /> Data de Nascimento</label>
+  <input type="text" value={obj.dataNascimento} onChange={eventoTeclado} name="dataNascimento" id="dataNascimento" placeholder="Data de Nascimento" className="form-control" />
+</div>
+<div>
+  <label htmlFor="telefone"><FontAwesomeIcon icon={['fas', 'phone']} /> Telefone</label>
+  <input type="text" value={obj.telefone} onChange={eventoTeclado} name="telefone" id="telefone" placeholder="Telefone" className="form-control" />
+</div>
+<div>
+  <label htmlFor="cidade"><FontAwesomeIcon icon={['fas', 'map-marker']} /> Cidade</label>
+  <input type="text" value={obj.cidade} onChange={eventoTeclado} name="cidade" id="cidade" placeholder="Cidade" className="form-control" />
+</div>
+<div>
+  <label htmlFor="texto" className='Diagnóstico'><FontAwesomeIcon icon={['fas', 'user']} /> Diagnóstico</label>
+  <input type="text" value={obj.texto} onChange={eventoTeclado} name="texto" id="texto" placeholder="Diagnóstico" className="form-control" />
+</div>
+<div>
+  <label htmlFor="receitas"><FontAwesomeIcon icon={['fas', 'user']} /> Receitas</label>
+  <input type="text" value={obj.receitas} onChange={eventoTeclado} name="receitas" id="receitas" placeholder="Receitas" className="form-control" />
+</div>
+<div>
+  <label htmlFor="exames"><FontAwesomeIcon icon={['fas', 'user']} /> Exames</label>
+  <input type="text" value={obj.exames} onChange={eventoTeclado} name="exames" id="exames" placeholder="Exames" className="form-control" />
+</div>
+<div>
+  <label htmlFor="data"><FontAwesomeIcon icon={['fas', 'calendar-alt']} /> Data</label>
+  <input type="text" value={obj.data} onChange={eventoTeclado} name="data" id="data" placeholder="Data" className="form-control" />
+</div>
+<div>
+  <label htmlFor="hora"><FontAwesomeIcon icon={['fas', 'user']} /> Hora</label>
+  <input type="text" value={obj.hora} onChange={eventoTeclado} name="hora" id="hora" placeholder="Hora" className="form-control" />
+</div>
 
       {exibirbtn ? (
         <input type="button" value="Cadastrar" onClick={cadastrar} className="btn btn-info" style={{ backgroundColor: '#C7F5A2' }} />
