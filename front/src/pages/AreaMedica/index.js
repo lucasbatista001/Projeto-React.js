@@ -18,19 +18,18 @@ function App() {
     cpf: '',
     sexo: '',
     email: '',
-    altura:'',
-    peso:'',
-    dataNascimento:'',
+    altura: '',
+    peso: '',
+    dataNascimento: '',
     telefone: '',
     cidade: '',
     texto: '',
     receitas: '',
     exames: '',
     data: '',
-    hora:'',
-    clienteID: '',
+    hora: '',
+    clienteID: ''
   });
-
   const [hasError, setHasError] = useState(false);
   const [hasSuccess, setHasSuccess] = useState(false);
 
@@ -54,6 +53,7 @@ function App() {
     const { name, value } = event.target;
     setClienteAtual({ ...clienteAtual, [name]: value });
   };
+
 
   const cadastrarCliente = () => {
     fetch('http://localhost:8080/clientes', {
@@ -81,7 +81,7 @@ function App() {
       })
       .catch((error) => {
         console.error('Erro ao cadastrar cliente:', error);
-        
+
         setHasError(true);
         setHasSuccess(false);
         setTimeout(() => {
@@ -103,7 +103,7 @@ function App() {
     const url = `http://localhost:8080/clientes/${clienteID}`;
 
     fetch(url, {
-      method: 'PUT',
+      method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
       },
@@ -130,11 +130,10 @@ function App() {
       })
       .catch((error) => {
         console.error('Erro ao atualizar cliente:', error);
-        
         setHasError(true);
         setHasSuccess(false);
         setTimeout(() => {
-          setHasError(false);
+          setHasError(true);
         }, 3000);
       });
   };
@@ -165,11 +164,10 @@ function App() {
       })
       .catch((error) => {
         console.error('Erro ao remover cliente:', error);
-        
         setHasError(true);
         setHasSuccess(false);
         setTimeout(() => {
-          setHasError(false);
+          setHasError(true);
         }, 3000);
       });
   };
@@ -182,22 +180,22 @@ function App() {
 
   const limparFormulario = () => {
     setClienteAtual({
-    nome: '',
-    nomeDosPais: '',
-    cpf: '',
-    sexo: '',
-    email: '',
-    altura:'',
-    peso:'',
-    dataNascimento:'',
-    telefone: '',
-    cidade: '',
-    texto: '',
-    receitas: '',
-    exames: '',
-    data: '',
-    hora:'',
-    clienteID: '',
+      nome: '',
+      nomeDosPais: '',
+      cpf: '',
+      sexo: '',
+      email: '',
+      altura: '',
+      peso: '',
+      dataNascimento: '',
+      telefone: '',
+      cidade: '',
+      texto: '',
+      receitas: '',
+      exames: '',
+      data: '',
+      hora: '',
+      clienteID: ''
     });
   };
 
@@ -211,20 +209,26 @@ function App() {
     setModalIsOpen(false);
   };
 
+  const handleInputChangetexto = (event, campo) => {
+    const { value } = event.target;
+    setClienteAtual({ ...clienteAtual, [campo]: value });
+  };
+  
+
   return (
     <div>
       <Navbar openModal={openModal} />
       <div style={{ padding: '10px' }}>
-      {hasError && (
-      <div className="alert alert-danger" role="alert" style={{ position: 'fixed', top: '0', left: '0', width: '100%', zIndex: '9999' }}>
-        Ocorreu um erro ao cadastrar/remover o cliente. Por favor, tente novamente.
-      </div>
-    )}
-    {hasSuccess && (
-      <div className="alert alert-success" role="alert" style={{ position: 'fixed', top: '0', left: '0', width: '100%', zIndex: '9999' }}>
-        Operação realizada com sucesso!
-      </div>
-    )}
+        {hasError && (
+          <div className="alert alert-danger" role="alert" style={{ position: 'fixed', top: '0', left: '0', width: '100%', zIndex: '9999' }}>
+            Ocorreu um erro ao cadastrar/remover o cliente. Por favor, tente novamente.
+          </div>
+        )}
+        {hasSuccess && (
+          <div className="alert alert-success" role="alert" style={{ position: 'fixed', top: '0', left: '0', width: '100%', zIndex: '9999' }}>
+            Operação realizada com sucesso!
+          </div>
+        )}
         <Tabela
           vetor={clientes}
           selecionar={selecionarCliente}
@@ -240,6 +244,7 @@ function App() {
       >
         <Formulario
           exibirbtn={btnCadastrar}
+          eventoTecladotexto={handleInputChangetexto} 
           eventoTeclado={handleInputChange}
           cadastrar={cadastrarCliente}
           obj={clienteAtual}
@@ -247,9 +252,11 @@ function App() {
           alterar={atualizarCliente}
           cancelar={limparFormulario}
         />
+
         <div><button onClick={closeModal} className="btn btn-secondary">
           Fechar
         </button></div>
+
       </Modal>
     </div>
   );

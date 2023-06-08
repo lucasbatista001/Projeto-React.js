@@ -23,6 +23,9 @@ function App() {
     dataNascimento:'',
     telefone: '',
     cidade: '',
+    texto: '',
+    receitas: '',
+    exames: '',
     data: '',
     hora:'',
     clienteID: ''
@@ -176,19 +179,22 @@ function App() {
 
   const limparFormulario = () => {
     setClienteAtual({
-    nome: '',
-    nomeDosPais: '',
-    cpf: '',
-    sexo: '',
-    email: '',
-    altura:'',
-    peso:'',
-    dataNascimento:'',
-    telefone: '',
-    cidade: '',
-    data: '',
-    hora:'',
-    clienteID: ''
+      nome: '',
+      nomeDosPais: '',
+      cpf: '',
+      sexo: '',
+      email: '',
+      altura:'',
+      peso:'',
+      dataNascimento:'',
+      telefone: '',
+      cidade: '',
+      texto: '',
+      receitas: '',
+      exames: '',
+      data: '',
+      hora:'',
+      clienteID: ''
     });
   };
   

@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 library.add(fas);
 
-function Formulario({ exibirbtn, eventoTeclado, cadastrar, obj, cancelar, remover, alterar }) {
+function Formulario({ exibirbtn, eventoTeclado, cadastrar, obj, cancelar, remover, alterar, eventoTecladotexto }) {
 
   return (
     <form>
@@ -53,12 +53,12 @@ function Formulario({ exibirbtn, eventoTeclado, cadastrar, obj, cancelar, remove
 </div>
 
 <div>
-  <label htmlFor="diagnostico" className='Diagnóstico'><FontAwesomeIcon icon={['fas', 'user']} /> Diagnóstico</label>
+  <label htmlFor="texto" className='Diagnóstico'><FontAwesomeIcon icon={['fas', 'user']} /> Diagnóstico</label>
   <textarea
-    value={obj.diagnostico}
-    onChange={eventoTeclado}
-    name="diagnostico"
-    id="diagnostico"
+    value={obj.texto}
+    onChange={(event) => eventoTecladotexto(event, 'texto')} 
+    name="texto"
+    id="texto"
     placeholder="Diagnóstico"
     className="form-control"
   />
@@ -78,7 +78,7 @@ function Formulario({ exibirbtn, eventoTeclado, cadastrar, obj, cancelar, remove
   <label htmlFor="exames"><FontAwesomeIcon icon={['fas', 'user']} /> Exames</label>
   <textarea
     value={obj.exames}
-    onChange={eventoTeclado}
+    onChange={(event) => eventoTecladotexto(event, 'exames')}
     name="exames"
     id="exames"
     placeholder="Exames"
@@ -99,7 +99,7 @@ function Formulario({ exibirbtn, eventoTeclado, cadastrar, obj, cancelar, remove
         <input type="button" value="Cadastrar" onClick={cadastrar} className="btn btn-info" style={{ backgroundColor: '#C7F5A2' }} />
       ) : (
         <div>
-          <input type="button" value="Alterar" onClick={() => alterar(obj.clienteID)} className="btn btn-warning" />
+          <input type="button" value="Cadastrar" onClick={() => alterar(obj.clienteID)} className="btn btn-warning" />
           <input type="button" value="Remover" onClick={() => remover(obj.clienteID)} className="btn btn-danger" />
           <input type="button" value="Cancelar" onClick={cancelar} className="btn btn-secondary" />
         </div>
